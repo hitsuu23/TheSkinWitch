@@ -4,21 +4,21 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Cinzel', serif;
-    color: #fff;
-    background: #000;
-    overflow-x: hidden;
+    color: #fff; /* Ensure text is always white for best readability */
+    background: #000; /* Fallback background */
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
-/* Background Image Settings for entire page */
+/* Background Image Settings for the entire page */
 #background-image-container {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('b5caa745-46e1-43bb-a8da-6d508e44043d.jpg') no-repeat center center;
+    background: url('b5caa745-46e1-43bb-a8da-6d508e44043d.jpg') no-repeat center center fixed; /* Adjust path as needed */
     background-size: cover;
-    z-index: -1;
+    z-index: -1; /* Keeps the background behind all content */
 }
 
 /* Overlay for Text Content to Enhance Readability */
@@ -37,7 +37,7 @@ html, body {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 50%; /* Smaller slideshow */
+    max-width: 50%; /* Adjusting slideshow size to be smaller */
     position: relative;
     margin: auto;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -47,16 +47,12 @@ html, body {
 /* Hide the images by default */
 .mySlides {
     display: none;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+    animation: fade 1.5s;
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from { opacity: .4 }
+    to { opacity: 1 }
 }
 
 /* Navigation Styles */
@@ -80,7 +76,7 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a:focus {
-    color: #ffcc00;
+    color: #ffcc00; /* Adding a highlight color for hover/focus */
 }
 
 /* Main Content Styles */
@@ -90,7 +86,7 @@ main {
 
 section {
     padding: 20px;
-    background: transparent;
+    background: transparent; /* Removing any background from sections for a clean look */
 }
 
 /* Footer Styles */
@@ -98,11 +94,11 @@ footer {
     width: 100%;
     text-align: center;
     padding: 10px 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for footer */
 }
 
 @media (max-width: 768px) {
     .slideshow-container {
-        max-width: 90%; /* Adjust size on smaller screens */
+        max-width: 90%; /* Ensures the slideshow adjusts on smaller screens */
     }
 }
