@@ -1,36 +1,25 @@
+// Initialize and control the slideshow
 let slideIndex = 0;
-let slides = document.getElementsByClassName("mySlides");
-let dots = document.getElementsByClassName("dot");
-let slideInterval;
-
 function showSlides() {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    Array.from(slides).forEach((slide) => slide.style.display = "none");
     slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (let i = 0; dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex-1].style.display = "block";
+    Array.from(dots).forEach((dot) => dot.className = dot.className.replace(" active", ""));
     dots[slideIndex-1].className += " active";
-    slideInterval = setTimeout(showSlides, 10000); // Change image every 2 seconds
+    setTimeout(showSlides, 10000); // Change image every 10 seconds
 }
 
-function currentSlide(n) {
-    clearTimeout(slideInterval);
-    slideIndex = n - 1;
-    showSlides();
-}
+document.addEventListener("DOMContentLoaded", showSlides);
 
-function plusSlides(n) {
-    clearTimeout(slideInterval);
-    slideIndex += n - 1;
-    if (slideIndex >= slides.length) {slideIndex = 0}
-    if (slideIndex < 0) {slideIndex = slides.length - 1}
-    showSlides();
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    showSlides();
+// Enable smooth scrolling for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
