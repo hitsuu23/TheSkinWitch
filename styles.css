@@ -1,6 +1,109 @@
 /* General Reset and Font Settings */
 html, body {
+    height: 100%;/* General Reset and Font Settings */
+html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    color: #fff;
+    background: #000;
+    overflow-x: hidden;
+}
+
+/* Background Image Settings */
+#background-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('b5caa745-46e1-43bb-a8da-6d508e44043d.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Overlay for Text Content to Enhance Readability */
+.overlay {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Header and Navigation Styles */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color: #ffcc00;
+}
+
+/* Main Content Styles */
+main {
+    text-align: center;
+}
+
+section {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
     margin: 0;
     padding: 0;
     font-family: 'Cinzel', serif; /* Elegant serif font */
