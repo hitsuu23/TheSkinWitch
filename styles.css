@@ -1,11 +1,9 @@
 /* styles.css */
 body {
-    font-family: 'Arial', sans-serif;/* styles.css */
-body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://example.com/path/to/your/magical_background.png');
+    background-image: url('https://example.com/path/to/your/magical_background.png'); /* Updated Background */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #44475a;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black for better readability */
     padding: 10px 20px;
     text-align: center;
 }
@@ -39,69 +37,9 @@ nav ul li a {
     font-weight: bold;
 }
 
-main {
+.main {
     padding: 20px;
-}
-
-.slideshow {
-    width: 100%;
-    height: 500px;
-    background-color: #6272a4;
-}
-
-footer {
-    text-align: center;
-    padding: 20px 10px;
-    background-color: #44475a;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-}
-
-    margin: 0;
-    padding: 0;
-    background-image: url('https://example.com/path/to/your/magical_background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-}
-
-header {
-    background-color: #44475a;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-#logo {
-    width: 150px;
-    height: auto;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+    background: rgba(44, 0, 30, 0.85); /* Deep purple background for sections */
 }
 
 .slideshow {
@@ -118,5 +56,18 @@ section {
 footer {
     text-align: center;
     padding: 20px 10px;
-    background-color: #44475a;
+    background-color: #272034; /* Deep purple shade */
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
 }
