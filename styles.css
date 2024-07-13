@@ -4,6 +4,7 @@ html, body {
     padding: 0;
     height: 100%;
     overflow-x: hidden;
+    font-family: 'Cinzel', serif; /* Apply Cinzel font */
 }
 
 /* Ensure the entire page is scrollable */
@@ -68,9 +69,16 @@ section {
     margin-top: 2rem;
 }
 
+#home h2 {
+    text-align: center;
+    font-size: 2em; /* Increase font size */
+    margin-top: 1rem;
+    color: #ffd700; /* Gold color for subtitle */
+}
+
 /* Slideshow container */
 .slideshow-container {
-    width: 50%; /* Set the width of the slideshow to 50% of the parent container */
+    width: 25%; /* Set the width of the slideshow to 25% of the parent container */
     margin: auto; /* Center the slideshow */
     position: relative;
 }
