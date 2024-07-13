@@ -79,7 +79,7 @@ section {
 /* Grid container */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     justify-items: center; /* Center items within each grid cell */
     padding: 2rem;
