@@ -67,7 +67,7 @@ section {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 450px; /* Set the width of the slideshow to 75% of 600px */
+    width: 75%; /* Set the width of the slideshow to 75% of the viewport width */
     margin: auto; /* Center the slideshow */
 }
 
