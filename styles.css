@@ -76,24 +76,23 @@ section {
     color: white; /* White color for subtitle */
 }
 
-/* Slideshow container */
-.slideshow-container {
-    width: 25%; /* Set the width of the slideshow to 25% of the parent container */
-    margin: auto; /* Center the slideshow */
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 2rem;
+}
+
+/* Grid items */
+.grid-item {
     position: relative;
-    display: inline-block; /* Display slideshows side by side */
-    vertical-align: top;
 }
 
-/* Slideshow image */
-.mySlides img, .mySlides2 img {
+.grid-image {
     width: 100%;
-    height: auto;
-}
-
-/* Dots container */
-.dots-container {
-    text-align: center;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Footer */
