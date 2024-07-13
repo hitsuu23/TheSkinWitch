@@ -10,9 +10,7 @@
     <meta name="keywords" content="skincare, magical treatments, beauty, wellness">
 </head>
 <body>
-    <div id="background-image-container">
-        <img src="b5caa745-46e1-43bb-a8da-6d508e44043d.jpg" alt="Mystical background">
-    </div>
+    <div id="background-image-container"></div>
     <div class="overlay">
         <header>
             <nav>
@@ -51,8 +49,8 @@
                         <img src="361592645_17957656766625680_34783557026039711_n.jpg" style="width:100%">
                         <div class="text">The Weeknd (Second Image)</div>
                     </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
                 </div>
                 <div style="text-align:center">
                     <span class="dot" onclick="currentSlide(1)"></span>
@@ -80,33 +78,6 @@
             <p>© 2024 The Magic Skin Witch. All Rights Reserved.</p>
         </footer>
     </div>
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
