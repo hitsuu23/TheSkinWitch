@@ -73,7 +73,7 @@ section {
     text-align: center;
     font-size: 2em; /* Increase font size */
     margin-top: 1rem;
-    color: #ffd700; /* Gold color for subtitle */
+    color: white; /* White color for subtitle */
 }
 
 /* Slideshow container */
@@ -81,10 +81,12 @@ section {
     width: 25%; /* Set the width of the slideshow to 25% of the parent container */
     margin: auto; /* Center the slideshow */
     position: relative;
+    display: inline-block; /* Display slideshows side by side */
+    vertical-align: top;
 }
 
 /* Slideshow image */
-.mySlides img {
+.mySlides img, .mySlides2 img {
     width: 100%;
     height: auto;
 }
