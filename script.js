@@ -61,5 +61,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     loadInitialImages();
-    setInterval(changeImage, 6500); // Change images every 6.5 seconds
+    setInterval(changeImage, 5000); // Change images every 5 seconds
 });
