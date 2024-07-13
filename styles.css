@@ -67,14 +67,21 @@ section {
 
 /* Slideshow container */
 .slideshow-container {
-    width: 75%; /* Set the width of the slideshow to 75% of the viewport width */
+    width: 75%; /* Set the width of the slideshow to 75% of the parent container */
+    max-width: 450px; /* Max width for smaller screens */
     margin: auto; /* Center the slideshow */
+    position: relative;
 }
 
 /* Slideshow image */
 .mySlides img {
     width: 100%;
     height: auto;
+}
+
+/* Dots container */
+.dots-container {
+    text-align: center;
 }
 
 /* Footer */
