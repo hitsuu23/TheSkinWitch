@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Cinzel', serif; /* Elegant serif font */
-    color: #fff;  /* Ensuring all text is white */
+    color: #fff; /* Ensuring all text is white */
     background: #000; /* Fallback background */
     overflow-x: hidden; /* Prevents horizontal scroll */
 }
@@ -30,7 +30,7 @@ html, body {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* Center vertically in all viewports */
     align-items: center;
     width: 100%;
     height: 100%;
@@ -40,12 +40,12 @@ html, body {
 }
 
 /* Header and Navigation Styles */
-nav {
+header {
     width: 100%; /* Full width to contain logo and nav items */
     display: flex;
     justify-content: space-between; /* Positions logo on left and nav items on right */
     align-items: center; /* Align items vertically */
-    padding: 0 20px; /* Padding on sides */
+    padding: 10px 20px; /* Padding on sides */
     box-sizing: border-box;
 }
 
@@ -64,8 +64,8 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-size: 1.5em; /* Larger font size for elegance */
-    transition: color 0.3s ease; /* Smooth transition for hover effects */
     color: #fff; /* Ensures text is white */
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
 }
 
 nav ul li a:hover, nav ul li a:focus {
@@ -74,12 +74,37 @@ nav ul li a:hover, nav ul li a:focus {
 
 /* Main Content Styles */
 main {
+    width: 100%; /* Ensure main content fills the width */
+    max-width: 1200px; /* Optional: constrain max width for large screens */
+    margin: auto; /* Center the content horizontally */
+    padding: 20px;
     text-align: center;
 }
 
 section {
     margin-top: 20px;
     padding: 20px;
+    background: transparent; /* Remove unnecessary backgrounds */
+    color: #fff; /* Ensure text is white for readability */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center alignment for better mobile experience */
+    }
+
+    nav ul {
+        width: 100%; /* Full width for navigation */
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center alignment of nav items */
+        margin-top: 10px; /* Add top margin for spacing */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Increase space between navigation items */
+    }
 }
 
 /* Footer Styles */
@@ -88,22 +113,4 @@ footer {
     text-align: center;
     padding: 10px 0;
     background: rgba(0, 0, 0, 0.5);
-}
-
-/* Responsive Design Adjustments */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack logo and navigation vertically on small screens */
-        align-items: flex-start; /* Align items to start to avoid covering text */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack nav items vertically on small screens */
-        align-items: flex-start; /* Align items to start to avoid covering text */
-        width: 100%; /* Full width for mobile nav */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* More space between nav items on mobile */
-    }
 }
