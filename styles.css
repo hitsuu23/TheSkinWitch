@@ -1,73 +1,90 @@
 /* styles.css */
-body {
-    font-family: 'Arial', sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-image: url('https://example.com/path/to/b5caa745-46e1-43bb-a8da-6d508e44043d.jpg'); /* Reference your actual hosted image URL */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
     color: #fff;
+    background: #000;
+    overflow-x: hidden;
+}
+
+#background-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: black;
+}
+
+#background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.overlay {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay for content */
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black for better readability */
-    padding: 10px 20px;
+    padding: 20px;
     text-align: center;
-}
-
-#logo {
-    width: 150px;
-    height: auto;
+    width: 100%;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ff00ff; /* Bright purple for links */
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.2em;
 }
 
-.main {
+main {
+    flex: 1;
     padding: 20px;
-    background: rgba(44, 0, 30, 0.85); /* Deep purple background for sections */
-}
-
-.slideshow {
-    width: 100%;
-    height: 500px;
-    background-color: #6272a4; /* Placeholder until images are added */
+    text-align: center;
 }
 
 section {
-    padding: 20px;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 footer {
     text-align: center;
-    padding: 20px 10px;
-    background-color: #272034; /* Deep purple shade */
+    padding: 10px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 768px) {
     nav ul {
-        display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     nav ul li {
-        display: block;
-        margin-bottom: 10px;
+        margin: 10px 0;
     }
 }
