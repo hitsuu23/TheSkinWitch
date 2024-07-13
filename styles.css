@@ -79,14 +79,17 @@ section {
 /* Grid container */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
+    justify-items: center; /* Center items within each grid cell */
     padding: 2rem;
 }
 
 /* Grid items */
 .grid-item {
-    position: relative;
+    width: 100%;
+    max-width: 200px; /* Set a maximum width for the grid items */
+    overflow: hidden;
 }
 
 .grid-image {
