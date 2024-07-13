@@ -9,7 +9,7 @@ html, body {
     overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
-/* Background Image Settings for the entire page */
+/* Background Image Settings for entire page */
 #background-image-container {
     position: fixed;
     top: 0;
@@ -40,14 +40,18 @@ html, body {
     max-width: 50%; /* Adjusting slideshow size to be smaller */
     position: relative;
     margin: auto;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
 
 /* Hide the images by default */
 .mySlides {
     display: none;
-    animation: fade 1.5s;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 @keyframes fade {
