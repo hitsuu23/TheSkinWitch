@@ -1,174 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">a<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Magic Skin Witch</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-    <meta name="description" content="The Magic Skin Witch offers exclusive skincare and magical treatments. Experience beauty intertwined with the mystical arts today!">
-    <meta name="keywords" content="skincare, magical treatments, beauty, wellness">
-</head>
-<body>
-    <div id="background-image-container">
-        <img src="b5caa745-46e1-43bb-a8da-6d508e44043d.jpg" alt="Mystical background">
-    </div>
-    <div class="overlay">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#booking">Book Appointment</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="home">
-                <h1>Welcome to The Magic Skin Witch, Sunshine Martinez</h1>
-                <div class="slideshow-container">
-                    <div class="mySlides fade">
-                        <img src="419557717_884799369813320_8581302738088613425_n.jpg" style="width:100%">
-                        <div class="text">Jessica Williams</div>
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="418997278_199518556582474_2514905692831125752_n.jpg" style="width:100%">
-                        <div class="text">Sophia Di Martino</div>
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="419308101_3682199198735455_5782245381695379653_n.jpg" style="width:100%">
-                        <div class="text">Jonathan Bailey</div>
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="362222439_17957656787625680_5148413918633484777_n.jpg" style="width:100%">
-                        <div class="text">The Weeknd (First Image)</div>
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="364061071_17960702834625680_8134428159021552754_n.jpg" style="width:100%">
-                        <div class="text">Niall Horan</div>
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="361592645_17957656766625680_34783557026039711_n.jpg" style="width:100%">
-                        <div class="text">The Weeknd (Second Image)</div>
-                    </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
-                    <span class="dot" onclick="currentSlide(6)"></span>
-                </div>
-            </section>
-            <section id="services">
-                <h2>Our Services</h2>
-                <p>Explore our exclusive skincare and magical treatments.</p>
-            </section>
-            <section id="booking">
-                <h2>Book an Appointment</h2>
-                <p>Book your appointment for a unique beauty and wellness experience.</p>
-            </section>
-            <section id="contact">
-                <h2>Contact Us</h2>
-                <p>Have questions? Contact us through email at contact@magicwitch.com or call us at (123) 456-7890.</p>
-            </section>
-        </main>
-        <footer>
-            <p>© 2024 The Magic Skin Witch. All Rights Reserved.</p>
-        </footer>
-    </div>
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
+/* General Reset and Font Settings */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    color: #fff; /* Ensure text is always white for best readability */
+    background: #000; /* Fallback background */
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+/* Background Image Settings for entire page */
+#background-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('b5caa745-46e1-43bb-a8da-6d508e44043d.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Keeps the background behind all content */
+}
 
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
+/* Overlay for Text Content to Enhance Readability */
+.overlay {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.15); /* Lighter overlay to enhance background visibility */
+}
 
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-        }
-    </script>
-</body>
-</html>
+/* Slideshow container */
+.slideshow-container {
+    max-width: 50%; /* Adjusting slideshow size to be smaller */
+    position: relative;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Magic Skin Witch</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-    <meta name="description" content="The Magic Skin Witch offers exclusive skincare and magical treatments. Experience beauty intertwined with the mystical arts today!">
-    <meta name="keywords" content="skincare, magical treatments, beauty, wellness">
-</head>
-<body>
-    <div id="background-image-container"></div>
-    <div class="overlay">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#booking">Book Appointment</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="home">
-                <h1>The Magic Skin Witch, Sunshine Martinez</h1>
-                <div class="slideshow-container">
-                    <div class="mySlides fade">
-                        <img src="slide1.jpg" style="width:100%">
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="slide2.jpg" style="width:100%">
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="slide3.jpg" style="width:100%">
-                    </div>
-                </div>
-            </section>
-            <!-- Additional sections for services, booking, and contact information -->
-        </main>
-        <footer>
-            <p>© 2024 The Magic Skin Witch. All Rights Reserved.</p>
-        </footer>
-    </div>
-    <script>
-    var slideIndex = 0;
-    showSlides();
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
 
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-        slides[slideIndex-1].style.display = "block";  
-        setTimeout(showSlides, 4000); // Change image every 4 seconds
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color: #ffcc00; /* Adding a highlight color for hover/focus */
+}
+
+/* Main Content Styles */
+main {
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    background: transparent; /* Removing any background from sections for a clean look */
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for footer */
+}
+
+@media (max-width: 768px) {
+    .slideshow-container {
+        max-width: 90%; /* Ensures the slideshow adjusts on smaller screens */
     }
-    </script>
-</body>
-</html>
+}
