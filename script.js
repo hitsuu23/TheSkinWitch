@@ -27,17 +27,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function loadInitialImages() {
+        console.log("Loading initial images");
         for (let i = 0; i < 2; i++) {
             const randomIndex = Math.floor(Math.random() * imageSources.length);
+            console.log(`Selected initial image index: ${randomIndex}`);
             const imageElement = createImageElement(imageSources[randomIndex]);
             gridContainer.appendChild(imageElement);
         }
     }
 
     function changeImage() {
+        console.log("Changing images");
         const images = document.querySelectorAll('.grid-image');
-        images.forEach(image => {
+        images.forEach((image, index) => {
             const randomIndex = Math.floor(Math.random() * imageSources.length);
+            console.log(`Changing image at index ${index} to image index: ${randomIndex}`);
             image.src = imageSources[randomIndex];
         });
     }
