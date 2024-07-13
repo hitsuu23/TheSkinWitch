@@ -58,6 +58,13 @@ section {
     color: white;
 }
 
+/* Center and enlarge welcome message */
+#home h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 2rem;
+}
+
 /* Slideshow container */
 .slideshow-container {
     max-width: 600px; /* Set the width of the slideshow */
