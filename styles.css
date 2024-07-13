@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Cinzel', serif; /* Elegant serif font */
-    color: #fff;  /* White text color for contrast against the dark background */
+    color: #fff;  /* Ensuring all text is white */
     background: #000; /* Fallback background */
     overflow-x: hidden; /* Prevents horizontal scroll */
 }
@@ -22,8 +22,7 @@ html, body {
 #background-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Adjust this to 'contain' for no cropping */
-    object-position: center; /* Center the image within the element */
+    object-fit: cover; /* Ensures the background covers the entire viewport */
 }
 
 /* Overlay for Text Content to Enhance Readability */
@@ -41,10 +40,19 @@ html, body {
 }
 
 /* Header and Navigation Styles */
+nav {
+    width: 100%; /* Full width to contain logo and nav items */
+    display: flex;
+    justify-content: space-between; /* Positions logo on left and nav items on right */
+    align-items: center; /* Align items vertically */
+    padding: 0 20px; /* Padding on sides */
+    box-sizing: border-box;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Align nav items to the right */
     padding: 0;
     margin: 0;
 }
@@ -54,14 +62,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffcc00; /* A golden color for links to pop on the dark background */
     text-decoration: none;
     font-size: 1.5em; /* Larger font size for elegance */
     transition: color 0.3s ease; /* Smooth transition for hover effects */
+    color: #fff; /* Ensures text is white */
 }
 
 nav ul li a:hover, nav ul li a:focus {
-    color: #ffffff; /* White color for hover/focus states */
+    color: #ffcc00; /* A golden color for hover */
 }
 
 /* Main Content Styles */
@@ -72,14 +80,10 @@ main {
 section {
     margin-top: 20px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Minimally intrusive background for sections */
-    border-radius: 10px;
 }
 
 /* Footer Styles */
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     text-align: center;
     padding: 10px 0;
@@ -88,11 +92,18 @@ footer {
 
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack logo and navigation vertically on small screens */
+        align-items: flex-start; /* Align items to start to avoid covering text */
+    }
+
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Stack nav items vertically on small screens */
+        align-items: flex-start; /* Align items to start to avoid covering text */
+        width: 100%; /* Full width for mobile nav */
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 10px 0; /* More space between nav items on mobile */
     }
 }
