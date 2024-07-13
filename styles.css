@@ -1,12 +1,12 @@
 /* General Reset and Font Settings */
 html, body {
-    height: 100%; /* Full height for the body to ensure background covers full page */
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Cinzel', serif; /* Stylish serif font */
-    color: #fff; /* White text for readability */
-    background: #000; /* Fallback background color */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: 'Cinzel', serif;
+    color: #fff;
+    background: #000;
+    overflow-x: hidden;
 }
 
 /* Background Image Settings for entire page */
@@ -16,9 +16,9 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('b5caa745-46e1-43bb-a8da-6d508e44043d.jpg') no-repeat center center fixed; /* Ensure the path is correct */
-    background-size: cover; /* Cover the entire viewport */
-    z-index: -1; /* Stay behind all content */
+    background: url('b5caa745-46e1-43bb-a8da-6d508e44043d.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
 }
 
 /* Overlay for Text Content to Enhance Readability */
@@ -32,16 +32,16 @@ html, body {
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.15); /* Semi-transparent overlay for text visibility */
+    background: rgba(255, 255, 255, 0.15);
 }
 
 /* Slideshow Container */
 .slideshow-container {
-    max-width: 50%; /* Smaller width for a neater appearance */
+    max-width: 50%;
     position: relative;
     margin: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px; /* Rounded corners for the slideshow */
+    border-radius: 10px;
 }
 
 /* Hide the images by default */
@@ -59,158 +59,43 @@ html, body {
     to { opacity: 1 }
 }
 
-/* Navigation Styles */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0;
-    margin: 0;
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 1.5em;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover, nav ul li a:focus {
-    color: #ffcc00; /* Gold color for hover/focus states */
-}
-
-/* Main Content Styles */
-main {
-    text-align: center;
-}
-
-section {
-    padding: 20px;
-    background: transparent; /* Ensure sections don't have a background to obstruct the view */
-}
-
-/* Footer Styles */
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-}
-
-@media (max-width: 768px) {
-    .slideshow-container {
-        max-width: 90%; /* Adjusts for smaller screens */
-    }
-}
-/* General Reset and Font Settings */
-html, body {
-    height: 100%; /* Full height for the body to ensure background covers full page */
-    margin: 0;
-    padding: 0;
-    font-family: 'Cinzel', serif; /* Stylish serif font */
-    color: #fff; /* White text for readability */
-    background: #000; /* Fallback background color */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Background Image Settings for entire page */
-#background-image-container {
-    position: fixed;
-    top: 0;
-    left: 0;
+.next {
     right: 0;
-    bottom: 0;
-    background: url('b5caa745-46e1-43bb-a8da-6d508e44043d.jpg') no-repeat center center fixed; /* Ensure the path is correct */
-    background-size: cover; /* Cover the entire viewport */
-    z-index: -1; /* Stay behind all content */
+    border-radius: 3px 0 0 3px;
 }
 
-/* Overlay for Text Content to Enhance Readability */
-.overlay {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.15); /* Semi-transparent overlay for text visibility */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
 }
 
-/* Slideshow Container */
-.slideshow-container {
-    max-width: 50%; /* Smaller width for a neater appearance */
-    position: relative;
-    margin: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px; /* Rounded corners for the slideshow */
+/* Dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
-/* Hide the images by default */
-.mySlides {
-    display: none;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from { opacity: .4 }
-    to { opacity: 1 }
-}
-
-/* Navigation Styles */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 1.5em;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover, nav ul li a:focus {
-    color: #ffcc00; /* Gold color for hover/focus states */
-}
-
-/* Main Content Styles */
-main {
-    text-align: center;
-}
-
-section {
-    padding: 20px;
-    background: transparent; /* Ensure sections don't have a background to obstruct the view */
-}
-
-/* Footer Styles */
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-}
-
-@media (max-width: 768px) {
-    .slideshow-container {
-        max-width: 90%; /* Adjusts for smaller screens */
-    }
+.active, .dot:hover {
+    background-color: #717171;
 }
