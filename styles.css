@@ -3,9 +3,10 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Cinzel', serif;
-    color: #fff;
-    overflow-x: hidden;
+    font-family: 'Cinzel', serif; /* Elegant serif font */
+    color: #fff;  /* White text color for contrast against the dark background */
+    background: #000; /* Fallback background */
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
 /* Background Image Settings */
@@ -15,13 +16,14 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1; /* Ensures the image stays behind the content */
 }
 
 #background-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Adjust this to 'contain' for no cropping */
+    object-position: center; /* Center the image within the element */
 }
 
 /* Overlay for Text Content to Enhance Readability */
@@ -35,7 +37,7 @@ html, body {
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.3); /* Lighter overlay to enhance background visibility */
+    background: rgba(255, 255, 255, 0.15); /* Lighter overlay to enhance background visibility */
 }
 
 /* Header and Navigation Styles */
@@ -52,14 +54,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffcc00;
+    color: #ffcc00; /* A golden color for links to pop on the dark background */
     text-decoration: none;
-    font-size: 1.5em;
-    transition: color 0.3s;
+    font-size: 1.5em; /* Larger font size for elegance */
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
 }
 
 nav ul li a:hover, nav ul li a:focus {
-    color: #ffffff;
+    color: #ffffff; /* White color for hover/focus states */
 }
 
 /* Main Content Styles */
@@ -70,7 +72,7 @@ main {
 section {
     margin-top: 20px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Minimally intrusive background for text sections */
+    background: rgba(255, 255, 255, 0.1); /* Minimally intrusive background for sections */
     border-radius: 10px;
 }
 
