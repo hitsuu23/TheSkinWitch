@@ -58,9 +58,22 @@ section {
     color: white;
 }
 
+/* Slideshow container */
+.slideshow-container {
+    max-width: 600px; /* Set the width of the slideshow */
+    margin: auto; /* Center the slideshow */
+}
+
+/* Slideshow image */
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.8);
-    color: white;
+    color: white; /* Set footer text color to white */
 }
