@@ -1,7 +1,5 @@
 /* General Reset and Font Settings */
 html, body {
-    height: 100%;/* General Reset and Font Settings */
-html, body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -11,7 +9,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Background Image Settings */
+/* Background Image Settings for entire page */
 #background-image-container {
     position: fixed;
     top: 0;
@@ -31,21 +29,37 @@ html, body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.15); /* Lighter overlay to enhance background visibility */
 }
 
-/* Header and Navigation Styles */
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+/* Slideshow container */
+.slideshow-container {
+    max-width: 50%; /* Smaller slideshow */
+    position: relative;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
 }
 
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Navigation Styles */
 nav ul {
     list-style: none;
     display: flex;
@@ -75,8 +89,8 @@ main {
 }
 
 section {
-    margin-top: 20px;
     padding: 20px;
+    background: transparent;
 }
 
 /* Footer Styles */
@@ -87,133 +101,8 @@ footer {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive Design Adjustments */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
+    .slideshow-container {
+        max-width: 90%; /* Adjust size on smaller screens */
     }
-
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-
-    margin: 0;
-    padding: 0;
-    font-family: 'Cinzel', serif; /* Elegant serif font */
-    color: #fff; /* Ensuring all text is white */
-    background: #000; /* Fallback background */
-    overflow-x: hidden; /* Prevents horizontal scroll */
-}
-
-/* Background Image Settings */
-#background-image-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Ensures the image stays behind the content */
-}
-
-#background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the background covers the entire viewport */
-}
-
-/* Overlay for Text Content to Enhance Readability */
-.overlay {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center vertically in all viewports */
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.15); /* Lighter overlay to enhance background visibility */
-}
-
-/* Header and Navigation Styles */
-header {
-    width: 100%; /* Full width to contain logo and nav items */
-    display: flex;
-    justify-content: space-between; /* Positions logo on left and nav items on right */
-    align-items: center; /* Align items vertically */
-    padding: 10px 20px; /* Padding on sides */
-    box-sizing: border-box;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end; /* Align nav items to the right */
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 1.5em; /* Larger font size for elegance */
-    color: #fff; /* Ensures text is white */
-    transition: color 0.3s ease; /* Smooth transition for hover effects */
-}
-
-nav ul li a:hover, nav ul li a:focus {
-    color: #ffcc00; /* A golden color for hover */
-}
-
-/* Main Content Styles */
-main {
-    width: 100%; /* Ensure main content fills the width */
-    max-width: 1200px; /* Optional: constrain max width for large screens */
-    margin: auto; /* Center the content horizontally */
-    padding: 20px;
-    text-align: center;
-}
-
-section {
-    margin-top: 20px;
-    padding: 20px;
-    background: transparent; /* Remove unnecessary backgrounds */
-    color: #fff; /* Ensure text is white for readability */
-}
-
-/* Responsive Design Adjustments */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center alignment for better mobile experience */
-    }
-
-    nav ul {
-        width: 100%; /* Full width for navigation */
-        flex-direction: column; /* Stack links vertically */
-        align-items: center; /* Center alignment of nav items */
-        margin-top: 10px; /* Add top margin for spacing */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Increase space between navigation items */
-    }
-}
-
-/* Footer Styles */
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    background: rgba(0, 0, 0, 0.5);
 }
